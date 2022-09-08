@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Passion+One&family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One' , cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+html, body {
+    min-height: 100vh; /* Tamanho minimo da view hight   VH = Altura , VW = largura*/
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    /*text-transform: uppercase -> transforma todas as letras em maisculas*/
+    font-variant: small-caps; /*Deixa todas as letras maisculas, entretando a incial é maior que as outras.*/
+    font-family: var(--fonte2);
+    font-size: 10vw;/*10% da largura da tela, desta maneira a letra irá diminuir de acordo com o tamanho da tela*/
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header > a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh; /*10% da altura da tela*/
+    padding-bottom: 10vh;
+    line-height: 2em;/*Espaçamento entre as linhas*/
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+
+}
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color:white;
+    box-shadow:
+     inset 6px 6px 13px 0 px rgba(0,0,0,0.473);
+     background-attachment: fixed; /*Deixa a imagem enquanto rola a tela, dando a impressão de transição*/
+}
+
+section.imagem > p {
+    display: inline-block; /*Se adapta ao tamanho do conteudo*/
+    padding: 5px;
+    text-shadow: 1px 1px 0px black;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    background-size: cover;
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    background-size: cover;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
